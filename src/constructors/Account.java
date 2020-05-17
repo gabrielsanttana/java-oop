@@ -2,12 +2,16 @@ package constructors;
 
 public class Account {
   public int accountNumber;
-  public int balance;
+  public double balance;
   public String costumerName;
   public String costumerEmailAddress;
   public String costumerPhoneNumber;
 
-  public Account(int accountNumber, int balance, String costumerName, String costumerEmailAddress, String costumerPhoneNumber) {
+  public Account() {
+    this(99999, 0, "Default name", "Default email", "Default phone number");
+  }
+
+  public Account(int accountNumber, double balance, String costumerName, String costumerEmailAddress, String costumerPhoneNumber) {
     this.accountNumber = accountNumber;
     this.balance = balance;
     this.costumerName = costumerName;
@@ -27,7 +31,7 @@ public class Account {
     return this.balance;
   }
 
-  public void setBalance(int balance) {
+  public void setBalance(double balance) {
     this.balance = balance;
   }
 
