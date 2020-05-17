@@ -7,6 +7,14 @@ public class Account {
   public String costumerEmailAddress;
   public String costumerPhoneNumber;
 
+  public Account(int accountNumber, int balance, String costumerName, String costumerEmailAddress, String costumerPhoneNumber) {
+    this.accountNumber = accountNumber;
+    this.balance = balance;
+    this.costumerName = costumerName;
+    this.costumerEmailAddress = costumerEmailAddress;
+    this.costumerPhoneNumber = costumerPhoneNumber;
+  }
+
   public int getAccountNumber() {
     return this.accountNumber;
   }
