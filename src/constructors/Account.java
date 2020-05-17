@@ -19,6 +19,20 @@ public class Account {
     this.costumerPhoneNumber = costumerPhoneNumber;
   }
 
+  public void deposit(double value) {
+    this.balance += value;
+  }
+
+  public void withdrawal(double value) {
+    if(this.balance - value < 0) {
+      System.out.println("It wasn't possible to withdrawal this value. Insufficient balance!");
+      return;
+    }
+
+    this.balance -= value;
+    System.out.println("Withdrawal done! Your remaining balance: "+ balance);
+  }
+
   public int getAccountNumber() {
     return this.accountNumber;
   }
@@ -27,7 +41,7 @@ public class Account {
     this.accountNumber = accountNumber;
   }
 
-  public int getBalance() {
+  public double getBalance() {
     return this.balance;
   }
 
