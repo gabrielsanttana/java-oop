@@ -7,12 +7,20 @@ public class Animal {
   private double size;
   private double weight;
 
-  public Animal(String name, int brain, int body, int size, int weight) {
+  public Animal(String name, int brain, int body, double size, double weight) {
     this.name = name;
     this.brain = brain;
     this.body = body;
     this.size = size;
     this.weight = weight;
+  }
+
+  public void eat() {
+    System.out.println("Animal.eat()");
+  }
+
+  public void makeSound() {
+    System.out.println("Animal.makeSound()");
   }
 
   public String getName() {
